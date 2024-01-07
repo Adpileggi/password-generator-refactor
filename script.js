@@ -83,9 +83,10 @@ let generatePassword = function() {
     // shuffle the character list in the array
     for (let i = passTypes.length - 1; i > 0; i--) {
       const swampIndex = Math.floor(Math.random() * (i+1));
-      const temp = passTypes[i]
+      const temp = passTypes[i];
       passTypes[i] = passTypes[swampIndex];
       passTypes[swampIndex] = temp;
+      
     };
 
     // return the shuffled array as a srting
